@@ -6093,6 +6093,10 @@ vue-codemirror@^3.1.8:
   dependencies:
     codemirror "^5.30.0"
 
+vue-ga@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-ga/-/vue-ga-1.0.0.tgz#c890fc529970af10abef2c42c81ea38cfb00cef1"
+
 vue-hot-reload-api@^2.2.0:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.2.3.tgz#43c8e5506d65a271d2571936d77253019fd3eb17"

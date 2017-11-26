@@ -85,7 +85,7 @@
                     name: this.component.name,
                     description: this.component.description,
                     html: this.component.html,
-                    tags: this.component.tags,
+                    tags: this.component.tags.map(item => item.name),
                     username: this.username,
                 }).then(response => this.$router.push(`/component/${response.data.data.slug}`))
                 .catch((error) => {

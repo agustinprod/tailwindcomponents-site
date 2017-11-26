@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import ga from 'vue-ga';
 
 const Feed = () => import('pages/Feed');
 const ComponentPage = () => import('pages/ComponentPage');
@@ -7,7 +8,7 @@ const NewComponentForm = () => import('pages/NewComponentForm');
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
     mode: 'history',
     routes: [
         {
@@ -34,3 +35,10 @@ export default new Router({
         },
     ],
 });
+
+
+if (process.env.NODE_ENV === 'production') {
+    ga(router, 'UA-110182129-1');
+}
+
+export default router;
