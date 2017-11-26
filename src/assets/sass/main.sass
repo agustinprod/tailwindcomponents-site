@@ -1,0 +1,23 @@
+@tailwind preflight
+
+@import './components'
+
+body
+    @apply .bg-grey-light
+
+
+a
+    text-decoration: none
+
+input:focus
+    outline: none
+
+img
+    max-width: 100%
+
+.fade-enter-active, .fade-leave-active
+    transition: opacity .3s ease-out
+.fade-enter, .fade-leave-to
+    opacity: 0
+
+@tailwind utilities

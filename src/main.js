@@ -1,0 +1,26 @@
+/* eslint-disable no-unused-vars */
+import Vue from 'vue';
+import { sync } from 'vuex-router-sync';
+import axios from 'axios';
+import 'prismjs/themes/prism-okaidia.css';
+
+import config from './env';
+import App from './App';
+import router from './router';
+import store from './store';
+
+import AuthorLink from './components/AuthorLink';
+
+sync(store, router);
+axios.defaults.baseURL = config.api.path;
+
+Vue.config.productionTip = false;
+
+Vue.component('AuthorLink', AuthorLink);
+
+/* eslint-disable no-new */
+new Vue({
+    el: '#app',
+    router,
+    render: h => h(App),
+});
