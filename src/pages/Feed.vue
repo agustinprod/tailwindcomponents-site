@@ -37,7 +37,6 @@
 
 <script>
     import axios from 'axios';
-    import Prism from 'prismjs';
     import Spinner from 'vue-simple-spinner';
     import TailwindListComponent from '../components/TailwindListComponent';
 
@@ -84,7 +83,6 @@
                     this.components = response.data.data;
                     this.links = response.data.links;
                     this.meta = response.data.meta;
-                    this.$nextTick(() => Prism.highlightAll());
                     this.loading = false;
                 });
             },

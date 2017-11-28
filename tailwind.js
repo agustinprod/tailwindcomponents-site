@@ -24,7 +24,7 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-var defaultConfig = require('tailwindcss').defaultConfig()
+var defaultConfig = require('tailwindcss/defaultConfig')();
 
 
 /*
@@ -130,7 +130,10 @@ var colors = {
 }
 
 module.exports = {
-
+  options: {
+    prefix: '',
+    important: false,
+  },
   /*
   |-----------------------------------------------------------------------------
   | Colors                                  https://tailwindcss.com/docs/colors
@@ -415,11 +418,11 @@ module.exports = {
   */
 
   borderRadius: {
-    default: '.25rem',
+    'none': '0',
     'sm': '.125rem',
+    default: '.25rem',
     'lg': '.5rem',
     'full': '9999px',
-    'none': '0',
   },
 
 
@@ -647,6 +650,7 @@ module.exports = {
   */
 
   margin: {
+    'auto': 'auto',
     'px': '1px',
     '0': '0',
     '1': '0.25rem',
@@ -655,6 +659,9 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '12': '3rem',
+    '16': '4rem',
+    '24': '6rem',
   },
 
 

@@ -2,7 +2,6 @@
 import Vue from 'vue';
 import { sync } from 'vuex-router-sync';
 import axios from 'axios';
-import 'prismjs/themes/prism-okaidia.css';
 
 import config from './env';
 import App from './App';

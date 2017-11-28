@@ -8,17 +8,15 @@
 
         <p class="my-4 text-grey-darker italic" v-text="component.description"></p>
 
-        <div class="flex">
-            <div class="w-1/2 hidden lg:block">
-                <pre class="language-html"><code v-text="component.html"></code></pre>
-            </div>
-            <div class="w-full w-1/2:lg bg-grey-lighter flex justify-center items-center p-4" v-html="component.html"></div>
-        </div>
+        <div class=" bg-grey-lighter flex justify-center items-center p-4" v-html="component.html"></div>
 
         <div class="flex justify-between mt-3">
             <div>
                 <router-link :to="`/tag/${tag.slug}`" class="pill" v-for="tag in component.tags" v-text="tag.name" :key="tag.slug"></router-link>
             </div>
+            <router-link :to="`/component/${component.slug}`" class="font-sans text-teal-light">
+                See component details
+            </router-link>
         </div>
     </div>
 </template>
