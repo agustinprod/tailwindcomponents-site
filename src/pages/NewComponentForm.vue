@@ -36,8 +36,8 @@
                 </div>
 
                 <div class="m-4 flex flex-col">
+                        <input type="text" id="username" v-model="component.username" class="form-control" placeholder="@yourtwitterhandle or post as anonymous">
                     <label for="username" class="mb-3 font-bold text-black text-sm">Your twitter handle <span class="text-grey font-normal">(optional)</span></label>
-                    <input type="text" id="username" v-model="component.username" class="form-control" placeholder="@yourtwitterhandle or post as anonymous">
                 </div>
 
                 <div class="flex justify-between mr-4 mt-8 p-4 items-center">
@@ -63,8 +63,8 @@
                     description: '',
                     html: '',
                     tags: [],
+                    username: '',
                 },
-                username: '',
                 tags: [],
                 errors: {},
             };
@@ -86,7 +86,7 @@
                     description: this.component.description,
                     html: this.component.html,
                     tags: this.component.tags.map(item => item.name),
-                    username: this.username,
+                    username: this.component.username,
                 }).then(response => this.$router.push(`/component/${response.data.data.slug}`))
                 .catch((error) => {
                     this.errors = error.response.data.errors;
@@ -103,6 +103,7 @@
 
 
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+
 <style>
     .multiselect__input {
         width: auto;
