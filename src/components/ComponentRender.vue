@@ -1,5 +1,5 @@
 <template>
-    <iframe :srcdoc="code" class="w-full" ref="code"></iframe>
+    <iframe :srcdoc="code" class="w-full resize" ref="code"></iframe>
 </template>
 
 <script>
@@ -9,8 +9,8 @@
 
         computed: {
             code() {
-                const styles = document.querySelectorAll('style');
-                let style = '<style>html, body { min-height: 100%; height: 100% }';
+                const styles = document.querySelectorAll('style, link');
+                let style = '';
 
                 for (let i = 0; i < styles.length; i += 1) {
                     style += styles[i].outerHTML;
@@ -40,7 +40,7 @@
 
                 tryToCalculateHeight();
 
-                return `<div class="twcomponents-container">${style}${this.component.html}</div>`;
+                return `<html><head>${style}</head><body><div class="twcomponents-container">${this.component.html}</div></body></html>`;
             },
         },
     };
