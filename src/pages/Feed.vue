@@ -3,8 +3,8 @@
         <div class="container mx-auto flex flex-col items-center">
             <input type="search" class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-grey-darker" placeholder="Search a component..." v-model="query" @keyup="search">
 
-            <div class="flex mt-2 h-6">
-                <router-link :to="`/tag/${tag.slug}`" class="pill" v-for="tag in tags" :key="tag.slug" v-text="tag.name"></router-link>
+            <div class="flex flex-wrap mt-2 min-h-6 justify-center">
+                <router-link :to="`/tag/${tag.slug}`" class="pill mb-2" v-for="tag in tags" :key="tag.slug" v-text="tag.name"></router-link>
             </div>
         </div>
 
