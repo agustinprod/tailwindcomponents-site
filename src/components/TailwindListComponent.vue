@@ -8,7 +8,8 @@
 
         <p class="my-4 text-grey-darker italic" v-text="component.description"></p>
 
-        <div class=" bg-grey-lighter flex justify-center items-center p-4" v-html="component.html"></div>
+        <component-render :component="component" />
+
 
         <div class="flex justify-between mt-3">
             <div>
@@ -22,8 +23,13 @@
 </template>
 
 <script>
+    import ComponentRender from './ComponentRender';
+
     export default {
         name: 'tailwind-component',
         props: ['component'],
+        components: {
+            ComponentRender,
+        },
     };
 </script>

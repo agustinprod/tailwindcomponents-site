@@ -1,6 +1,6 @@
 <template>
     <div v-if="component" class="pb-8">
-        <div class="container mx-auto mt-3 bg-white shadow appearance-none rounded">
+        <div class="m-3 bg-white shadow appearance-none rounded">
             <h2 class="p-4 bg-grey-lighter text-teal-dark font-sans">{{ component.name }} <small class="text-sm text-grey">by <author-link :author="component.author" /></small></h2>
             <p class="p-4 my-4 text-grey-darker rounded bg-grey-lighter m-4" v-text="component.description" v-if="component.description"></p>
 
@@ -12,7 +12,7 @@
                 <code-editor :source="component.html" @change="refresh"></code-editor>
             </div>
 
-            <div class="bg-white flex justify-center items-center min-h-halfscreen border-t border-b border-grey-light py-8" v-html="component.html"></div>
+            <component-render :component="component" />
 
         </div>
 
@@ -32,6 +32,7 @@
 <script>
     import axios from 'axios';
     import CodeEditor from '../components/CodeEditor';
+    import ComponentRender from '../components/ComponentRender';
 
     export default {
         data() {
@@ -54,6 +55,7 @@
 
         components: {
             CodeEditor,
+            ComponentRender,
         },
     };
 </script>

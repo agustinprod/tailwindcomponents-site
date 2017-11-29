@@ -1,6 +1,6 @@
 <template>
     <form @submit.prevent="submit" class="pb-8">
-        <div class="container mx-auto mt-3 bg-white shadow appearance-none rounded">
+        <div class="m-3 bg-white shadow appearance-none rounded">
             <h1 class="font-sans p-3">Submit a component</h1>
             <div class="flex px-3 items-center">
                 <h3 class="font-mono text-grey-dark font-light" :class="{ 'text-red' : this.errors.html }">Source</h3>
@@ -12,7 +12,8 @@
             </div>
 
             <h3 class="p-3 font-mono text-grey-dark font-light" :class="{ 'text-red' : this.errors.html }">Preview</h3>
-            <div class="bg-white flex justify-center items-center min-h-halfscreen border-t border-b border-grey-light" v-html="component.html"></div>
+
+            <component-render :component="component" />
 
             <div class="bg-grey-lighter pb-4">
                 <div class="m-4 flex flex-col">
@@ -54,6 +55,7 @@
     import axios from 'axios';
     import Multiselect from 'vue-multiselect';
     import CodeEditor from '../components/CodeEditor';
+    import ComponentRender from '../components/ComponentRender';
 
     export default {
         data() {
@@ -97,6 +99,7 @@
         components: {
             CodeEditor,
             Multiselect,
+            ComponentRender,
         },
     };
 </script>
