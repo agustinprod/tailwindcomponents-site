@@ -23,7 +23,7 @@
 
                 <div class="m-4 flex flex-col">
                     <label for="description" class="mb-3 font-bold text-black text-sm">Describe what it is</label>
-                    <textarea type="text" id="description" v-model="component.text" class="form-control" placeholder="(optional)"></textarea>
+                    <textarea type="text" id="description" v-model="component.description" class="form-control" placeholder="(optional)"></textarea>
                 </div>
                 <div class="m-4 flex flex-col">
                     <label for="description" class="mb-3 font-bold text-black text-sm">Tag it</label>
@@ -37,8 +37,8 @@
                 </div>
 
                 <div class="m-4 flex flex-col">
-                        <input type="text" id="username" v-model="component.username" class="form-control" placeholder="@yourtwitterhandle or post as anonymous">
                     <label for="username" class="mb-3 font-bold text-black text-sm">Your twitter handle <span class="text-grey font-normal">(optional)</span></label>
+                    <input type="text" id="username" v-model="component.username" class="form-control" placeholder="@yourtwitterhandle or post as anonymous">
                 </div>
 
                 <div class="flex justify-between mr-4 mt-8 p-4 items-center">

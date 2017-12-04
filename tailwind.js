@@ -130,6 +130,7 @@ var colors = {
 }
 
 module.exports = {
+  modules: 'all',
   options: {
     prefix: '',
     important: false,

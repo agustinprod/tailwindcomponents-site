@@ -12,6 +12,7 @@
             <h2 class="text-center text-grey font-light text-md mb-3 font-sans" v-if="!tag">Latest components</h2>
             <h2 class="text-center text-grey font-light text-md mb-3 font-sans" v-else-if="query">Search results for '{{ query }}'</h2>
             <h2 class="text-center text-grey font-light text-md mb-3 font-sans" v-else>Tag: {{ tag }}</h2>
+
             <spinner line-fg-color="#f6993f" v-if="loading"></spinner>
 
             <transition name="fade" >
