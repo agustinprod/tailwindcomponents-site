@@ -1,7 +1,10 @@
 <template>
     <form @submit.prevent="submit" class="pb-8">
         <div class="m-3 bg-white shadow appearance-none rounded">
-            <h1 class="font-sans p-3">Submit a component</h1>
+            <div class="flex justify-between items-center  p-3">
+                <h1 class="font-sans">Submit a component</h1>
+                <a href="https://tailwindcss.com/docs/what-is-tailwind/" target="_blank">Go to TailwindCss Docs</a>
+            </div>
             <div class="flex px-3 items-center">
                 <h3 class="font-mono text-grey-dark font-light" :class="{ 'text-red' : this.errors.html }">Source</h3>
                 <p class="text-grey text-xs ml-3">(Control + Space to get autocomplete options)</p>

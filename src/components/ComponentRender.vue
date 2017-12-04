@@ -1,8 +1,10 @@
 <template>
-    <iframe :srcdoc="code" class="w-full resize" ref="code"></iframe>
+    <iframe :srcdoc="code" class="w-full resize" ref="code" seamless></iframe>
 </template>
 
 <script>
+    /* eslint-disable no-useless-escape */
+
     export default {
         name: 'component-render',
         props: ['component'],
@@ -40,12 +42,22 @@
 
                 tryToCalculateHeight();
 
-                return `<html><head>${style}</head><body><div class="twcomponents-container">${this.component.html}</div></body></html>`;
+                const disableLinks = `<script>
+                    Array.prototype.slice.call(document.getElementsByTagName(\'a\')).forEach(function() {
+                        this.onclick = function() { return false; }
+                     });
+                <\/script>`;
+
+                return `<html>
+                    <head>
+                        ${style}
+                    </head>
+                    <body>
+                        <div class="twcomponents-container">${this.component.html}</div>
+                        ${disableLinks}
+                    </body>
+                </html>`;
             },
         },
     };
 </script>
-
-<style scoped>
-
-</style>
