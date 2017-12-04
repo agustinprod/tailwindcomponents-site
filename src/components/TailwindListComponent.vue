@@ -1,5 +1,5 @@
 <template>
-    <div class="rounded overflow-hidden shadow mb-6 px-6 pt-6 pb-6 bg-white text-black hover:shadow-lg">
+    <div class="rounded overflow-hidden shadow mb-6 px-6 pt-6 pb-6 bg-white text-black border-t-4 border-teal group">
 
         <router-link :to="`/component/${component.slug}`" class="font-sans text-teal-dark hover:text-teal text-xl">
             {{ component.name }}
