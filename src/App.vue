@@ -35,6 +35,11 @@
     export default {
         name: 'app',
 
+        metaInfo: {
+            title: 'Tailwind CSS Components',
+            titleTemplate: '%s | Tailwind CSS Components',
+        },
+
         data() {
             return {
             };

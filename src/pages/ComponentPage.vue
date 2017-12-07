@@ -41,6 +41,18 @@
             };
         },
 
+        metaInfo() {
+            return {
+                title: this.component ? `${this.component.name} by ${this.component.author.name}` : null,
+                meta: [
+                    {
+                        name: 'description',
+                        content: (this.component ? `Tailwind CSS Component using utilities to make a '${this.component.name}' by ${this.component.author.name}. ${this.component.description}` : null),
+                    },
+                ],
+            };
+        },
+
         async created() {
             const response = await axios.get(`api/components/${this.$route.params.slug}`);
 

@@ -2,6 +2,7 @@
 import Vue from 'vue';
 import { sync } from 'vuex-router-sync';
 import axios from 'axios';
+import Meta from 'vue-meta';
 
 import config from './env';
 import App from './App';
@@ -16,6 +17,7 @@ axios.defaults.baseURL = config.api.path;
 Vue.config.productionTip = false;
 
 Vue.component('AuthorLink', AuthorLink);
+Vue.use(Meta);
 
 /* eslint-disable no-new */
 new Vue({

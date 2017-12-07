@@ -17,6 +17,7 @@
     "vue": "^2.5.2",
     "vue-codemirror": "^3.1.8",
     "vue-ga": "^1.0.0",
+    "vue-meta": "^1.4.0",
     "vue-multiselect": "^2.0.6",
     "vue-router": "^3.0.1",
     "vue-simple-spinner": "^1.2.8",
