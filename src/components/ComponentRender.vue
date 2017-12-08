@@ -1,5 +1,5 @@
 <template>
-    <iframe :srcdoc="code" class="w-full resize" ref="code" seamless></iframe>
+    <iframe :srcdoc="code" class="w-full resize max-h-4/5-screen" ref="code" seamless></iframe>
 </template>
 
 <script>
@@ -29,6 +29,15 @@
                         ) {
                             tryToCalculateHeight();
                         } else {
+                            /* Trigger max height directly to avoid the
+                            * infinitely resizing on elements with screen relative sizes
+                            */
+
+                            if (this.component.html.indexOf('screen') > 0) {
+                                this.$refs.code.height = '9999px';
+                                return;
+                            }
+
                             this.$refs.code.height = `${this.$refs.code.contentWindow.document.body.scrollHeight}px`;
 
                             // external images will cause a reflow
