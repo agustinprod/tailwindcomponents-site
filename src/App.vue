@@ -1,9 +1,9 @@
 <template>
     <div id="app" class="flex flex-col min-h-screen border-t-2 border-teal">
 
-        <router-link to="/" class="container mx-auto my-8 flex flex-col justify-center items-center font-sans">
+        <router-link to="/" class="container mx-auto my-8 flex flex-col justify-center items-center font-sans antialiased">
             <h1 class="text-4xl sm:text-5xl text-teal-dark font-thin tracking-tight sm:tracking-wide">Tailwind<span class="text-orange">Components</span></h1>
-            <p class="text-sm text-grey-dark tracking-wide">A repository for community components</p>
+            <p class="text-sm text-grey-dark tracking-wide">A repository for community components using Tailwind CSS</p>
         </router-link>
 
 
@@ -18,7 +18,7 @@
         <div class="text-center text-grey text-xs mt-auto mb-3 px-3">
             <p>
                 Made with ❤️ by <a class="text-grey-darker" href="https://twitter.com/killgt">@killgt</a> @ Málaga, Spain &bull;
-                Tailwind is a Utility Framework by
+                Tailwind CSS is a Utility Framework by
                 <a href="https://twitter.com/adamwathan">@adamwathan</a>,
                 <a href="https://twitter.com/reinink">@reinink</a>,
                 <a href="https://twitter.com/davidhemphill">@davidhemphill</a> and
@@ -26,7 +26,7 @@
                 &bull;
                 Check the docs @ <a class="text-grey-darker" href="https://tailwindcss.com/">tailwindcss.com</a>
             </p>
-            <p>This is open source project, check the source at <a href="https://github.com/killgt/tailwindcomponents">github.com</a></p>
+            <p>This is a open source project, check the code at <a href="https://github.com/killgt/tailwindcomponents">github.com</a></p>
         </div>
     </div>
 </template>

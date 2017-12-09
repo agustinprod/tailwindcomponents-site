@@ -56,6 +56,18 @@
             };
         },
 
+        metaInfo() {
+            return {
+                title: this.tag || 'Latest components',
+                meta: [
+                    {
+                        name: 'description',
+                        content: 'A repository for community components using Tailwind CSS, buttons, cards, forms, inputs, layouts and more',
+                    },
+                ],
+            };
+        },
+
         watch: {
             // eslint-disable-next-line object-shorthand
             '$route'(to) {
