@@ -17,7 +17,7 @@
 
             <transition name="fade" >
                 <div class="flex flex-col" v-if="!loading">
-                    <tailwind-list-component :component="c" v-for="c in components" key="c.id"/>
+                    <tailwind-list-component :component="c" v-for="c in components" :key="c.id"/>
                 </div>
             </transition>
 

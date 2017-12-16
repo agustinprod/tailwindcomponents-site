@@ -11,9 +11,10 @@
             <router-view />
         </div>
 
-        <router-link to="/new" class="hidden sm:block absolute pin-t pin-r m-4 bg-transparent hover:bg-orange text-teal-dark font-semibold hover:text-white py-2 px-4 border border-teal hover:border-transparent rounded">
-            Submit your own
-        </router-link>
+        <div class="absolute pin-t pin-r m-8 hidden lg:flex">
+            <a href="https://tailwindcss.com" class="hidden xl:block mr-2 bg-teal font-semibold text-white py-2 px-4 rounded">Tailwind Docs</a>
+            <router-link to="/new" class="bg-transparent hover:bg-orange text-teal-dark font-semibold hover:text-white py-2 px-4 border border-teal hover:border-transparent rounded">Submit your own</router-link>
+        </div>
 
         <div class="text-center text-grey text-xs mt-auto mb-3 px-3">
             <p>
